@@ -1,107 +1,166 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mitischika Minengefecht</title>
+    <title>mitischika</title>
+    <link rel="icon" href="icon.ico">
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+        #header {
+            background-color: #f0f0f0;
+            text-align: right;
+            padding: 10px;
+            color: #444;
+        }
+
+        #logo {
+            width: 100%;
+            text-align: center;
+        }
+
+        #logo img {
+            width: 100%;
+        }
+
+        #headline {
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            color: orange;
+            text-shadow: 2px 2px 2px #888;
+        }
+
+        #content {
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        .article-table {
+            width: 100%;
+        }
+
+        .article-box {
+            display: table-cell;
+            width: 30%;
+            text-align: center;
+            vertical-align: top;
+            padding: 10px;
+            cursor: pointer; /* Macht den Mauszeiger zum Zeiger, um zu signalisieren, dass es anklickbar ist */
+        }
+
+        .article-box img {
+            width: 100%;
+        }
+
+        .popup {
+            display: none;
+            text-align: center;
             padding: 20px;
         }
 
-        h1 {
-            text-align: center;
-        }
-
-        .box {
-            display: inline-block;
-            width: 27%;
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            text-align: center;
-            box-shadow: 3px 3px 5px #888888;
-            transition: transform 0.2s;
-        }
-
-        .box:hover {
-            transform: scale(1.05);
-        }
-
-        .box img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .text {
+        #footer {
             text-align: center;
             margin-top: 20px;
         }
 
-        .link {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .link a {
-            text-decoration: none;
+        #footer a {
+            color: blue;
             font-weight: bold;
-            color: #007bff;
+            text-decoration: none;
+            margin: 0 10px;
         }
 
-        .bottom-text {
-            text-align: center;
-            margin-top: 20px;
+        #logik {
+            text-align: right;
+            color: #444;
+            padding: 10px;
+        }
+
+        /* Media Query für Bildschirme kleiner oder gleich 720px (typisch für Handys) */
+        @media (max-width: 720px) {
+            .article-box {
+                display: block;
+                width: 50%;
+                height: 20%;
+            }
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Willkommen auf meiner Webseite</h1>
-        <div class="box">
-            <img src="LB_1.png" alt="LuckyBlock I herstellen"> <!-- Erstes Bild -->
-            <p><h4>Lucky Block I</h4></p>
-            <p>Beinhaltet unter Anderem Rüstung mit leicht verbesserten Waffen und Rüstung.</p>
-        </div>
-        <div class="box">
-            <img src="LB_2.png" alt="LuckyBlock II herstellen"> <!-- Zweites Bild -->
-            <p><h4>Lucky Block II</h4></p>
-            <p>Beinhaltet unter Anderem Rüstung mit verbesserten Waffen, Rüstung und Werkzeugen.</p>
-        </div>
-        <!-- Weitere Boxen und Text wie zuvor -->
-        <div class="box">
-            <img src="LB_3.png" alt="LuckyBlock III herstellen">
-            <p>Beinhaltet unter Anderem Rüstung mit stark verbesserten Waffen, Rüstung und Werkzeugen.</p>
-        </div>
-        <div class="box">
-            <img src="nether_star.png" alt="Splitter herstellen">
-            <p><h4>Lucky Block III</h4></p>
-            <p>Splitter werden automatisch durch Erze eingesammelt, doch es besteht die Möglichkeit, sie selbst herzustellen.</p>
-        </div>
-        <div class="box">
-            <img src="bild6.jpg" alt="Bild 6">
-            <p>Beschreibung für Bild 6</p>
-        </div>
-        <div class="bottom-text">
-            Dies ist der Text unter den Boxen.
-        </div>
-        <div class="text">
-            Das ist ein Text.
-        </div>
-        <div class="link">
-            <a href="https://www.youtube.com/channel/UC-vBq27saFzqQ7CCP9mySJw">YouTube</a>
-            <a href="https://mitischika.github.io/startseite/">Startseite</a>
-            <a href="#">Community</a>
-        </div>
+    <div id="header">
+        mitischika
     </div>
-</body>
+    <div id="logo">
+        <img src="index_bild2.png" alt="Penta">
+    </div>
+    <div id="headline">
+        <p></p>
+        <h1>MINENGEFECHT</h1>
+        <p></p>
+        <p></p>
+    </div>
+    <div id="content">
+        <p>
+            Wir begrüßen euch auf der Informationsseite für das Spiel 'Minengefecht'.
+        </p>
+        <p>
+            In diesem Spiel werdet ihr mit bis zu 11 anderen Spielern in eine 150x150 große Arena teleportiert. 
+            Die Arena befindet sich unter der Erde. 
+            Ihr könnt euch mit einer Spitzhacke durch das Gestein bewegen. 
+            Jeder Spieler spielt für sich alleine. 
+            Ihr findet Ausrüstung, indem ihr Erze im Boden abbaut. 
+            Nach einer bestimmten Zeit werdet ihr an die Oberfläche in eine Kampfarena gebracht. 
+            Gewonnen hat entweder der letzte Überlebende oder alle Spieler, wenn die Zeit abläuft.
+        </p>
+        <p></p>
+        <p></p>
+    </div>
+    <table class="article-table">
+        <tr>
+            <td class="article-box" onclick="showPopup(1)">
+                <img src="Hintergrund.png" alt="Startseite">
+                Startseite
+            </td>
+            <td class="article-box" onclick="showPopup(2)">
+                <img src="Hintergrund.png" alt="Artikel 2">
+                Zweite Seite
+            </td>
+            <td class="article-box" onclick="showPopup(3)">
+                <img src="Hintergrund.png" alt="Artikel 3">
+                Dritte Seite
+            </td>
+        </tr>
+    </table>
+    <div class="popup" id="popup1">
+        Inhalt für die Startseite
+    </div>
+    <div class="popup" id="popup2">
+        Inhalt für die Zweite Seite
+    </div>
+    <div class="popup" id="popup3">
+        Inhalt für die Dritte Seite
+    </div>
+    <div id="footer">
+        <a href="https://mitischika.github.io/startseite/">Startseite</a>
+        <a href="link2.html">Download</a>
+        <a href="https://www.youtube.com/channel/UC-vBq27saFzqQ7CCP9mySJw">YouTube</a>
+    </div>
+    <div id="logik">
+        LOGIK
+    </div>
 
+    <script>
+        function showPopup(popupNumber) {
+            var popup = document.getElementById("popup" + popupNumber);
+            if (popup.style.display === "block") {
+                popup.style.display = "none";
+            } else {
+                popup.style.display = "block";
+            }
+        }
+    </script>
+</body>
 </html>
