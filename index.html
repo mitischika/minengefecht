@@ -61,6 +61,15 @@
             padding: 20px;
         }
 
+        .content {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .content img {
+            width: 100%;
+        }
+
         #footer {
             text-align: center;
             margin-top: 20px;
@@ -86,10 +95,8 @@
                 width: 50%;
                 height: 20%;
             }
-            #content {
-                font-size: 14px;
-                margin-left: 4%;
-                margin-right: 4%;
+            .content {
+                width: 100%;
             }
         }
     </style>
@@ -126,7 +133,7 @@
     <table class="article-table">
         <tr>
             <td class="article-box" onclick="showPopup(1)">
-                <img src="Hintergrund.png" alt="Startseite">
+                <img src="Hintergrund.png" alt="Rezepte">
                 Rezepte
             </td>
             <td class="article-box" onclick="showPopup(2)">
@@ -156,7 +163,7 @@
             <img src="nether_star.png" alt="Splitter">
             <p><strong>Splitter</strong></p>
         </div>
-</div>
+    </div>
     <div class="popup" id="popup2">
         <strong>Inhalt für die Zweite Seite</strong>
     </div>
@@ -179,7 +186,7 @@
             if (popup.style.display === "block") {
                 popup.style.display = "none";
             } else {
-                popup.style.display = "block";
+                popup.style display = "block";
             }
         }
     </script>
