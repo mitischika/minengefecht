@@ -40,13 +40,13 @@
 
         .article-table {
             width: 100%;
+            display: flex;
+            justify-content: space-between;
         }
 
         .article-box {
-            display: table-cell;
             width: 30%;
             text-align: center;
-            vertical-align: top;
             padding: 10px;
             cursor: pointer; /* Macht den Mauszeiger zum Zeiger, um zu signalisieren, dass es anklickbar ist */
         }
@@ -135,65 +135,46 @@
         <p></p>
         <p></p>
     </div>
-    <table class="article-table">
-        <tr>
-            <td class="article-box" onclick="showPopup(1)">
-                <img src="mg_rezepte.png" alt="Rezepte">
-                Rezepte
-            </td>
-            <td class="article-box" onclick="showPopup(2)">
-                <img src="mg_details.png" alt="Details">
-                Details
-            </td>
-            <td class="article-box" onclick="showPopup(3)">
-                <img src="mg_scores.png" alt="Auswertung">
-                Auswertung
-            </td>
-        </tr>
-    </table>
+    <div class="article-table">
+        <div class="article-box" onclick="showPopup(1)">
+            <img src="mg_rezepte.png" alt="Rezepte">
+            <div class="content">
+                <p><strong>Rezepte</strong></p>
+                <p>Text für Rezepte.</p>
+            </div>
+        </div>
+        <div class="article-box" onclick="showPopup(2)">
+            <img src="mg_details.png" alt="Details">
+            <div class="content">
+                <p><strong>Details</strong></p>
+                <p>Text für Details.</p>
+            </div>
+        </div>
+        <div class="article-box" onclick="showPopup(3)">
+            <img src="mg_scores.png" alt="Auswertung">
+            <div class="content">
+                <p><strong>Auswertung</strong></p>
+                <p>Text für Auswertung.</p>
+            </div>
+        </div>
+    </div>
     <div class="popup" id="popup1">
-        <table>
-            <tr>
-                <td>
-                    <img src="LB_1.png" alt="Lucky Block I">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p><strong>Lucky Block I</strong></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="LB_2.png" alt="Lucky Block II">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p><strong>Lucky Block II</strong></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="LB_3.png" alt="Lucky Block III">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p><strong>Lucky Block III</strong></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="nether_star.png" alt="Splitter">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p><strong>Splitter</strong></p>
-                </td>
-            </tr>
-        </table>
+        <div class="content">
+            <img src="LB_1.png" alt="Lucky Block I">
+            <p><strong>Lucky Block I</strong></p>
+        </div>
+        <div class="content">
+            <img src="LB_2.png" alt="Lucky Block II">
+            <p><strong>Lucky Block II</strong></p>
+        </div>
+        <div class="content">
+            <img src="LB_3.png" alt="Lucky Block III">
+            <p><strong>Lucky Block
+        </div>
+        <div class="content">
+            <img src="nether_star.png" alt="Splitter">
+            <p><strong>Splitter</strong></p>
+        </div>
     </div>
     <div class="popup" id="popup2">
         <strong>Inhalt für die Zweite Seite</strong>
