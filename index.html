@@ -207,26 +207,24 @@
         LOGIK
     </div>
 
-<div class="popup" id="popup1">
-    <div class="content">
-        <div class="content-item">
-            <img src="LB_1.png" alt="Lucky Block I">
-            <p><strong>Lucky Block I</strong></p>
-        </div>
-        <div class="content-item">
-            <img src="LB_2.png" alt="Lucky Block II">
-            <p><strong>Lucky Block II</strong></p>
-        </div>
-        <div class="content-item">
-            <img src="LB_3.png" alt="Lucky Block III">
-            <p><strong>Lucky Block III</strong></p>
-        </div>
-        <div class="content-item">
-            <img src="nether_star.png" alt="Splitter">
-            <p><strong>Splitter</strong></p>
-        </div>
-    </div>
-</div>
+<script>
+    function showPopup(popupNumber) {
+        var popup = document.getElementById("popup" + popupNumber);
+        if (popup.style.display === "block") {
+            popup.style.display = "none";
+        } else {
+            popup.style.display = "block";
+        }
+
+        if (popupNumber === 1) {
+            var contentItems = popup.getElementsByClassName("content-item");
+            for (var i = 0; i < contentItems.length; i++) {
+                contentItems[i].style.display = "inline-block";
+            }
+        }
+    }
+</script>
+
 
 </body>
 </html>
