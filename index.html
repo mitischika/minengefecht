@@ -207,23 +207,23 @@
         LOGIK
     </div>
 
-<script>
-    function showPopup(popupNumber) {
-        var popup = document.getElementById("popup" + popupNumber);
-        if (popup.style.display === "block") {
-            popup.style.display = "none";
-        } else {
-            popup.style.display = "block";
-        }
+    <script>
+        function showPopup(popupNumber) {
+            var popup = document.getElementById("popup" + popupNumber);
+            if (popup.style.display === "block") {
+                popup.style.display = "none";
+            } else {
+                popup.style.display = "block";
+            }
 
-        if (popupNumber === 1) {
-            var contentItems = popup.getElementsByClassName("content-item");
-            for (var i = 0; i < contentItems.length; i++) {
+            if (popupNumber === 1) {
+                var contentItems = popup.getElementsByClassName("content-item");
+                for (var i = 0; i < contentItems.length; i++) {
                 contentItems[i].style.display = "inline-block";
+                }
             }
         }
-    }
-</script>
+    </script>
 
 
 </body>
